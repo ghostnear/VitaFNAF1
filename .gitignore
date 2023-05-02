@@ -1,0 +1,13 @@
+# Ignore built files
+bin/
+build/
+
+# Ignore vscode specific files
+.vscode/
+.cache/
+
+# Ignore cmake files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
