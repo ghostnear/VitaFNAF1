@@ -13,7 +13,7 @@
 	<frame id="frame2">
 		<liveitem>
 			<text valign="bottom" align="left" text-align="left" text-valign="bottom" line-space="3" ellipsis="on">
-				<str color="#ffffff" size="40" bold="on" shadow="on">Storm Test App</str>
+				<str color="#ffffff" size="40" bold="on" shadow="on">Five Nights at Freddy's</str>
 			</text>
 		</liveitem>
 	</frame>
@@ -22,7 +22,7 @@
 		<liveitem>
 			<target>https://ghostnear.github.io</target>
 			<text valign="top" align="left" text-align="left" text-valign="top" line-space="2" ellipsis="on">
-				<str size="22" shadow="on">by GhostNear</str>
+				<str size="22" shadow="on">port by GhostNear</str>
 			</text>
 		</liveitem>
 	</frame>

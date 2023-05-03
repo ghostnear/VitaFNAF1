@@ -1,16 +1,13 @@
-# Libstorm Example Project
-Can be used as a small start to begin with [libstorm](https://github.com/ghostnear/libstorm).
+# VitaFNAF1
+A remake of FNAF1 for the PSVita made in libStorm.
 
-Use any of the scripts in the /scripts folder to build the app.
+The purpose of the making of this is the expansion of the capabilities of the framework while providing some entertainment value.
 
-## Requirements
+This should be able to run on any platform supported by libStorm.
 
-- CMake
-- Ninja if you build on Linux, this can be removed in the build.sh file.
-- a C++ compiler, of course.
-- [libstorm](https://github.com/ghostnear/libstorm) which is included as a Github submodule in the /external folder.
+Also the assets are not included as for this repo to be able to remain public.
 
-### PSVita executable format info.
-
-- [LiveArea Specs](https://gist.github.com/Hammerill/64411eebf071b93396b7d310ba8d6776)
-- [template.xml info](https://www.psdevwiki.com/vita/index.php/template.xml)
+## Resources used
+- [Screenshots of the decompiled code](https://imgur.com/a/xe01I#EB0sLer)
+- [Notes regarding the screenshots](https://pastebin.com/N1YZ10Nv)
+- [Notes regarding audio](https://pastebin.com/2u0Bpt3B)

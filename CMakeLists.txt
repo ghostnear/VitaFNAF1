@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 2.8.12)
 
 # Project dependencies first.
 add_subdirectory(external)
@@ -8,11 +8,11 @@ if(BUILD_TARGET MATCHES "VITA")
 
     ## Configuration options for this app
     # Display name (under bubble in LiveArea)
-    set(VITA_APP_NAME "Storm Test App")
+    set(VITA_APP_NAME "Five Nights at Freddy's")
 
     # Unique ID must be exactly 9 characters. Recommended: XXXXYYYYY where X =
     # unique string of developer and Y = a unique number for this app
-    set(VITA_TITLEID  "STRM00000")
+    set(VITA_TITLEID  "GHNR00001")
 
     # Optional version string to show in LiveArea's more info screen
     set(VITA_VERSION  "01.00")
@@ -25,7 +25,7 @@ else()
 endif()
 
 # Project metadata
-project(exampleApp)
+project(FNAF1)
 
 file(
     GLOB
@@ -78,9 +78,7 @@ if(BUILD_TARGET MATCHES "VITA")
         # TODO: replace some of this with folder copies or something, it's too much work for all of this.
         FILE assets/assetlist.json assets/assetlist.json
         FILE assets/fonts/list.json assets/fonts/list.json
-        FILE assets/fonts/SCP/LICENSE.md assets/fonts/SCP/LICENSE.md
-        FILE assets/fonts/SCP/SourceCodePro-Light.otf assets/fonts/SCP/SourceCodePro-Light.otf
-        FILE assets/fonts/SCP/SourceCodePro-SemiboldIt.otf assets/fonts/SCP/SourceCodePro-SemiboldIt.otf
+        FILE assets/fonts/Volter-FNAF1.ttf assets/Volter-FNAF1.ttf
     )
 
 else()
