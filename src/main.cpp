@@ -13,7 +13,7 @@ int main(int argc, char* argv[])
     Window::set_name("Five Nights At Freddy's");
 
     // Original game is supposed to run at 60 fps, let's make sure that is still a thing.
-    GameManager::limit_FPS(60);
+    // GameManager::limit_FPS(60); TODO: make sure this works.
     GameManager::push_state(new LoadingState());
 
     // Main loop
