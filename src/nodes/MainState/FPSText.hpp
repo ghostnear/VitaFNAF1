@@ -1,5 +1,4 @@
-#ifndef LIBSTORM_EXAMPLE_FPS_TEXT_HPP
-#define LIBSTORM_EXAMPLE_FPS_TEXT_HPP
+#pragma once
 
 #include <libStorm.hpp>
 #include <prefabs/all.hpp>
@@ -17,5 +16,3 @@ public:
     // Constructor
     FPSText(FPSTextConfig config);
 };
-
-#endif

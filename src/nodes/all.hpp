@@ -1,7 +1,5 @@
-#ifndef LIBSTORM_EXAMPLE_ALL_NODES
-#define LIBSTORM_EXAMPLE_ALL_NODES
+#pragma once
 
 #include "MainState/all.hpp"
 #include "LoadingState/all.hpp"
 
-#endif

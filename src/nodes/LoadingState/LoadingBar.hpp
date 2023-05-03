@@ -1,5 +1,4 @@
-#ifndef LIBSTORM_EXAMPLE_LOADING_BAR_HPP
-#define LIBSTORM_EXAMPLE_LOADING_BAR_HPP
+#pragma once
 
 #include <libStorm.hpp>
 
@@ -16,5 +15,3 @@ public:
     // Constructor
     LoadingBar(LoadingBarConfig config);
 };
-
-#endif

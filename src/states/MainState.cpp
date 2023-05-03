@@ -4,9 +4,6 @@ using namespace Storm;
 
 void MainState::on_init()
 {
-    ScrollingRectanglesConfig cfg;
-    root->add_child(new ScrollingRectangles(cfg), "blue_rectangles");
-
     FPSTextConfig fpsTextcfg;
     fpsTextcfg.textCfg.size = 32;
     root->add_child(new FPSText(fpsTextcfg), "fps_text");
@@ -22,7 +19,7 @@ void MainState::on_destroy()
 
 void MainState::draw()
 {
-    Graphics::clear(50, 100, 155);
+    Graphics::clear(0, 0, 0);
 
     // Draw scene
     root->execute_all("draw");

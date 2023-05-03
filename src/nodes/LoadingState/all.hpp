@@ -1,6 +1,3 @@
-#ifndef LIBSTORM_EXAMPLE_LOADINGSTATE_NODES
-#define LIBSTORM_EXAMPLE_LOADINGSTATE_NODES
+#pragma once
 
 #include "LoadingBar.hpp"
-
-#endif
