@@ -12,14 +12,6 @@ void main_text_update(Node* slf)
 
     Vec2<int> winSize = Window::get_size();
     auto ratio = 1.0 * winSize.x / winSize.y;
-
-    auto text_size = slf->get_component<size_t>("text_size");
-    size_t new_value = (size_t)(std::min(winSize.x, winSize.y) / 540.0 * 128);
-    if(new_value != *text_size)
-    {
-        *text_size = new_value;
-        MainText::redraw_text_node(slf);
-    }
     
     if(winSize.x > winSize.y)
     {

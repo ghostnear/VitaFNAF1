@@ -12,8 +12,8 @@ int main(int argc, char* argv[])
     // Set metadata
     Window::set_name("Five Nights At Freddy's");
 
-    // Original game is supposed to run at 60 fps, let's make sure that is still a thing.
-    // GameManager::limit_FPS(60); TODO: make sure this works.
+    // Original game is supposed to run at 60 fps, but VSync will work.
+    Graphics::toggle_vsync();
     GameManager::push_state(new LoadingState());
 
     // Main loop

@@ -11,7 +11,9 @@ struct MainTextConfig
         .y = 0.5
     };
     double scale = 0.5;
-    Storm::Prefabs::TextNodeConfig textCfg;
+    Storm::Prefabs::TextNodeConfig textCfg = {
+        .size = 64
+    };
 };
 
 class MainText : public Storm::Prefabs::TextNode
