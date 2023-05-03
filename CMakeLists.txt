@@ -78,7 +78,7 @@ if(BUILD_TARGET MATCHES "VITA")
         # TODO: replace some of this with folder copies or something, it's too much work for all of this.
         FILE assets/assetlist.json assets/assetlist.json
         FILE assets/fonts/list.json assets/fonts/list.json
-        FILE assets/fonts/Volter-FNAF1.ttf assets/Volter-FNAF1.ttf
+        FILE assets/fonts/Volter-FNAF1.ttf assets/fonts/Volter-FNAF1.ttf
     )
 
 else()
