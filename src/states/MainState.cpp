@@ -4,10 +4,6 @@ using namespace Storm;
 
 void MainState::on_init()
 {
-    FPSTextConfig fpsTextcfg;
-    fpsTextcfg.textCfg.size = 32;
-    root->add_child(new FPSText(fpsTextcfg), "fps_text");
-
     MainTextConfig config;
     root->add_child(new MainText(config), "text_main");
 }

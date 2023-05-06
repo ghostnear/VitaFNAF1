@@ -3,5 +3,10 @@
         "type": "font",
         "name": "font_pixel",
         "path": "Volter-FNAF1.ttf"
+    },
+    {
+        "type": "font",
+        "name": "font_default",
+        "path": "Volter-FNAF1.ttf"
     }
 ]

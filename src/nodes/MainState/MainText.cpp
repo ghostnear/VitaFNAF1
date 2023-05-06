@@ -6,7 +6,7 @@ void main_text_update(Node* slf)
 {
     auto boundaries = slf->get_component<Rect<double>>("boundaries");
     auto scaling = *(slf->get_component<double>("mainText_scaling"));
-    Vec2<int> position = Window::get_size().multiply_by_components(*slf->get_component<Vec2<double>>("mainText_padding"));
+    Vec2<int> position = Window::get_size().multiply_by_components(*(slf->get_component<Vec2<double>>("mainText_padding")));
     boundaries->position.x = position.x;
     boundaries->position.y = position.y;
 
@@ -30,7 +30,7 @@ MainText::MainText(MainTextConfig config) : TextNode(config.textCfg)
     // Set stuff to a desired value to make all look nice
     set_component<std::string>(
         "text",
-        new std::string("LibStorm")
+        new std::string("FNAF1")
     );
     set_component<Vec2<double>>(
         "text_offset",

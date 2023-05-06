@@ -1,6 +1,6 @@
 #pragma once
 
-#include <prefabs/all.hpp>
+#include <prefabs/TextNode.hpp>
 
 struct LoadingTextConfig
 {

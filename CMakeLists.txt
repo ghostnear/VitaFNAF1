@@ -60,22 +60,25 @@ if(BUILD_TARGET MATCHES "VITA")
     )
 
     ## Create Vita files
-    vita_create_self(${PROJECT_NAME}.self ${PROJECT_NAME})
+    vita_create_self(
+        ${PROJECT_NAME}.self ${PROJECT_NAME}
+        SAFE    # Use unsafe if system modules are used.
+    )
 
-    # The FILE directive lets you add additional files to the VPK, the syntax is
-    # FILE src_path dst_path_in_vpk. In this case, we add the LiveArea paths.
     vita_create_vpk(
         ${PROJECT_NAME}.vpk
         ${VITA_TITLEID}
         ${PROJECT_NAME}.self
         VERSION ${VITA_VERSION}
         NAME ${VITA_APP_NAME}
+        FOLDER assets/original/ assets/original/
         # Vita System files need to be separately set
         FILE vita-metadata/icon0.png sce_sys/icon0.png
         FILE vita-metadata/livearea/contents/background.png sce_sys/livearea/contents/background.png
         FILE vita-metadata/livearea/contents/startup.png sce_sys/livearea/contents/startup.png
         FILE vita-metadata/livearea/contents/template.xml sce_sys/livearea/contents/template.xml
-        # TODO: replace some of this with folder copies or something, it's too much work for all of this.
+        
+        # Asset files need to be specified manually :c
         FILE assets/assetlist.json assets/assetlist.json
         FILE assets/fonts/list.json assets/fonts/list.json
         FILE assets/fonts/Volter-FNAF1.ttf assets/fonts/Volter-FNAF1.ttf
