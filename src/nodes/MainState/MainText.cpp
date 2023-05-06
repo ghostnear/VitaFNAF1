@@ -30,24 +30,22 @@ MainText::MainText(MainTextConfig config) : TextNode(config.textCfg)
     // Set stuff to a desired value to make all look nice
     set_component<std::string>(
         "text",
-        new std::string("LibStorm"),
-        true
+        new std::string("LibStorm")
     );
     set_component<Vec2<double>>(
         "text_offset",
         new Vec2<double>{
             .x = 0.5,
             .y = 0.5
-        },
-        true
+        }
     );
 
     // Init values
-    add_component<double>(
+    set_component<double>(
         "mainText_scaling",
         new double(config.scale)
     );
-    add_component<Vec2<double>>(
+    set_component<Vec2<double>>(
         "mainText_padding",
         new Vec2<double>(config.padding)
     );

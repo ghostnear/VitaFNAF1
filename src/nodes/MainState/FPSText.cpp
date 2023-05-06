@@ -33,15 +33,15 @@ void fps_text_draw(Node* slf)
 
 FPSText::FPSText(FPSTextConfig config) : TextNode(config.textCfg)
 {
-    add_component<size_t>(
+    set_component<size_t>(
         "frame_count",
         new size_t(0)
     );
-    add_component<double>(
+    set_component<double>(
         "update_timer",
         new double(0)
     );
-    add_component<double>(
+    set_component<double>(
         "update_freq",
         new double(config.updateRate)
     );
