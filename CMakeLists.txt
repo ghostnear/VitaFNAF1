@@ -71,18 +71,19 @@ if(BUILD_TARGET MATCHES "VITA")
         VERSION ${VITA_VERSION}
         NAME ${VITA_APP_NAME}
         # Vita System files need to be separately set
-        FILE assets/vita/icon0.png sce_sys/icon0.png
-        FILE assets/vita/livearea/contents/background.png sce_sys/livearea/contents/background.png
-        FILE assets/vita/livearea/contents/startup.png sce_sys/livearea/contents/startup.png
-        FILE assets/vita/livearea/contents/template.xml sce_sys/livearea/contents/template.xml
+        FILE vita-metadata/icon0.png sce_sys/icon0.png
+        FILE vita-metadata/livearea/contents/background.png sce_sys/livearea/contents/background.png
+        FILE vita-metadata/livearea/contents/startup.png sce_sys/livearea/contents/startup.png
+        FILE vita-metadata/livearea/contents/template.xml sce_sys/livearea/contents/template.xml
         # TODO: replace some of this with folder copies or something, it's too much work for all of this.
         FILE assets/assetlist.json assets/assetlist.json
         FILE assets/fonts/list.json assets/fonts/list.json
         FILE assets/fonts/Volter-FNAF1.ttf assets/fonts/Volter-FNAF1.ttf
+        FILE assets/original/list.json assets/original/list.json
+        FILE assets/original/605.png assets/original/605.png
     )
 
 else()
-
     # Specific project flags for Debug / Release. (TODO)
     target_compile_options(
         ${PROJECT_NAME}
@@ -100,12 +101,5 @@ else()
         COMMAND "${CMAKE_COMMAND}" -E copy_directory_if_different
             "../assets/"
             "../bin/assets/"
-    )
-
-    # Remove Vita assets. (TODO don't copy them in the first place?)
-    add_custom_command(
-        TARGET ${PROJECT_NAME} POST_BUILD
-        COMMAND "${CMAKE_COMMAND}" -E rm -rf
-            "../bin/assets/vita/"
     )
 endif()

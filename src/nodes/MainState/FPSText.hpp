@@ -1,6 +1,5 @@
 #pragma once
 
-#include <libStorm.hpp>
 #include <prefabs/all.hpp>
 
 struct FPSTextConfig

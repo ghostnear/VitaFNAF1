@@ -1,5 +1,6 @@
 #include <libStorm.hpp>
 #include "states/all.hpp"
+#include "system/GameManager.hpp"
 
 using namespace Storm;
 
@@ -12,24 +13,13 @@ int main(int argc, char* argv[])
     // Set metadata
     Window::set_name("Five Nights At Freddy's");
 
-    // Original game is supposed to run at 60 fps, but VSync will work.
+    // Original game is supposed to run at 60 fps, but VSync will do.
     Graphics::toggle_vsync();
     GameManager::push_state(new LoadingState());
+    
+    // PSVita screen resolution.
+    Window::set_size({960, 544});
 
     // Main loop
-    while(!Window::should_close() && GameManager::is_running())
-    {
-        // Poll events
-        Input::pollEvents();
-
-        // Update
-        GameManager::update();
-
-        // Draw
-        if(!Window::is_minimized())
-            GameManager::draw();
-    }
-
-    // Quit and return the quit result
-    return StormQuit(EXIT_SUCCESS);
+    return StormMainLoop();
 }
