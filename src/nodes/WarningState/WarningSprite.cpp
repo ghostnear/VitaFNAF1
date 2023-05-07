@@ -18,7 +18,7 @@ void WarningSprite::update_warning_sprite(Node* slf)
         "sprite_position",
         new Vec2<double>{
             .x = Window::get_size().x / 2.0,
-            .y = Window::get_size().y / 2.0
+            .y = Window::get_size().y / 2.1
         }
     );
 }

@@ -62,6 +62,7 @@ if(BUILD_TARGET MATCHES "VITA")
     ## Create Vita files
     vita_create_self(
         ${PROJECT_NAME}.self ${PROJECT_NAME}
+        SAFE    # Use unsafe if system modules are used.
     )
 
     vita_create_vpk(

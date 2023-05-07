@@ -13,11 +13,6 @@ void LoadingState::on_init()
     AssetLoader::start();
 }
 
-void LoadingState::on_destroy()
-{
-
-}
-
 void LoadingState::draw()
 {
     Graphics::clear(0, 0, 0);

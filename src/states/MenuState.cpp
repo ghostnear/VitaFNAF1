@@ -7,11 +7,6 @@ void MenuState::on_init()
 
 }
 
-void MenuState::on_destroy()
-{
-
-}
-
 void MenuState::draw()
 {
     Graphics::clear(25, 25, 25);

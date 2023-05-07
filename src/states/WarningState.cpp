@@ -7,11 +7,6 @@ void WarningState::on_init()
     root->add_child(new WarningSprite({}), "warning_sprite");
 }
 
-void WarningState::on_destroy()
-{
-
-}
-
 void WarningState::draw()
 {
     Graphics::clear(0, 0, 0);
