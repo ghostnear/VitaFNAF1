@@ -9,7 +9,7 @@ struct WarningSpriteConfig
         .image = AssetManager::get_asset<ImageAsset>("sprite_menu_warning"),
         .position = {
             .x = Window::get_size().x / 2.0,
-            .y = Window::get_size().y / 2.0
+            .y = Window::get_size().y / 2.1
         },
         .scale = {
             .x = 1,
