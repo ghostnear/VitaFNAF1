@@ -2,7 +2,8 @@
 
 #include <libStorm.hpp>
 
-#include "MainState.hpp"
+#include "WarningState.hpp"
+#include "../nodes/LoadingState/all.hpp"
 
 class LoadingState : public Storm::State
 {

@@ -2,9 +2,9 @@
 
 #include <libStorm.hpp>
 
-#include "../nodes/MainState/all.hpp"
+#include "../nodes/WarningState/all.hpp"
 
-class MainState : public Storm::State
+class WarningState : public Storm::State
 {
 public:
     void on_init() override;

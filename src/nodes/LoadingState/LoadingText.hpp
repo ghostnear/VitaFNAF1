@@ -4,11 +4,31 @@
 
 struct LoadingTextConfig
 {
-    Storm::Prefabs::TextNodeConfig textCfg;
+    Storm::Prefabs::TextNodeConfig textCFG = {
+        .size = 32,
+        .textOffset = {
+            .x = 1,
+            .y = 0
+        },
+        .boundaries = {
+            .position = {
+                .x = 920,
+                .y = 490,
+            },
+            .size = {
+                .x = 100,
+                .y = 25,
+            }
+        },
+        .initialText = "Loading..."
+    };
 };
 
 class LoadingText : public Storm::Prefabs::TextNode
 {
+private:
+    static void update_loading_text(Node* slf);
+
 public:
     // Constructor
     LoadingText(LoadingTextConfig config);

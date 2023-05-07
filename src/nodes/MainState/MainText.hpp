@@ -17,6 +17,9 @@ struct MainTextConfig
 
 class MainText : public Storm::Prefabs::TextNode
 {
+protected:
+    static void main_text_update(Node* slf);
+
 public:
     // Constructor
     MainText(MainTextConfig config);

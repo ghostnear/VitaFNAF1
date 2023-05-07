@@ -1,19 +1,18 @@
-#include "MainState.hpp"
+#include "WarningState.hpp"
 
 using namespace Storm;
 
-void MainState::on_init()
+void WarningState::on_init()
 {
-    MainTextConfig config;
-    root->add_child(new MainText(config), "text_main");
+    
 }
 
-void MainState::on_destroy()
+void WarningState::on_destroy()
 {
 
 }
 
-void MainState::draw()
+void WarningState::draw()
 {
     Graphics::clear(0, 0, 0);
 
@@ -23,7 +22,7 @@ void MainState::draw()
     Graphics::update();
 }
 
-void MainState::update(double dt)
+void WarningState::update(double dt)
 {
     // Press escape to close window
 #ifndef VITA

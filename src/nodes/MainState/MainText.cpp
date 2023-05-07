@@ -2,7 +2,7 @@
 
 using namespace Storm;
 
-void main_text_update(Node* slf)
+void MainText::main_text_update(Node* slf)
 {
     auto boundaries = slf->get_component<Rect<double>>("boundaries");
     auto scaling = *(slf->get_component<double>("mainText_scaling"));
