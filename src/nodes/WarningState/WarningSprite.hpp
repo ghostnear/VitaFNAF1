@@ -4,7 +4,7 @@
 
 struct WarningSpriteConfig
 {
-    double alphaDecayRate = 0.5;
+    double alphaDecayRate = 0.4;
     Prefabs::SpriteNodeConfig spriteCFG = {
         .image = AssetManager::get_asset<ImageAsset>("sprite_menu_warning"),
         .position = {

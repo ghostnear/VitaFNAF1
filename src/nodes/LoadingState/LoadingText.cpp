@@ -3,8 +3,7 @@
 void LoadingText::update_loading_text(Node* slf)
 {
     // Check if font was loaded, and if so, set the loading text font to it.
-    static FontAsset* loadingFont;
-    loadingFont = AssetManager::get_asset<FontAsset>("font_pixel");
+    auto loadingFont = AssetManager::get_asset<FontAsset>("font_pixel");
     
     if(loadingFont != nullptr)
     {

@@ -7,7 +7,7 @@
 struct BackgroundStaticConfig
 {
     int lowAlpha = 50;
-    int highAlpha = 149;
+    int highAlpha = 129;
     double update_rate = 9 / 100.0;
     double frame_rate = 1 / 60.0;
 
