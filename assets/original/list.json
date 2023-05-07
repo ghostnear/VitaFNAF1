@@ -8,5 +8,31 @@
         "type": "image",
         "name": "sprite_menu_warning",
         "path": "605.png"
+    },
+    {
+        "type": "animation",
+        "name": "sprite_static",
+        "path": "static/",
+        "data": [
+            "12.png",
+            "13.png",
+            "14.png",
+            "15.png",
+            "16.png",
+            "17.png",
+            "18.png",
+            "20.png"
+        ]
+    },
+    {
+        "type": "animation",
+        "name": "sprite_menu_freddy",
+        "path": "menu_freddy/",
+        "data": [
+            "431.png",
+            "440.png",
+            "441.png",
+            "442.png"
+        ]
     }
 ]

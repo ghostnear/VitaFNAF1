@@ -4,12 +4,13 @@ using namespace Storm;
 
 void MenuState::on_init()
 {
-
+    root->add_child(new BackgroundFreddy({}), "background_freddy");
+    //root->add_child(new BackgroundStatic({}), "background_static");
 }
 
 void MenuState::draw()
 {
-    Graphics::clear(25, 25, 25);
+    Graphics::clear(0, 0, 0);
 
     // Draw scene
     root->execute_all("draw");

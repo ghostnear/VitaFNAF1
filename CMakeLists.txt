@@ -32,6 +32,7 @@ file(
     EXECUTABLE_FILES
         "src/*.cpp"
         "src/states/*.cpp"
+        "src/nodes/MenuState/*.cpp"
         "src/nodes/WarningState/*.cpp"
         "src/nodes/LoadingState/*.cpp"
 )
