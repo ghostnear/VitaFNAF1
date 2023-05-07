@@ -6,14 +6,13 @@ struct LoadingTextConfig
 {
     Prefabs::TextNodeConfig textCFG = {
         .size = 32,
-        .textOffset = {
-            .x = 1,
-            .y = 0
+        .textOffset ={
+            .y = 0.5
         },
         .boundaries = {
             .position = {
-                .x = 920,
-                .y = 490,
+                .x = 40,
+                .y = 500,
             },
             .size = {
                 .x = 100,

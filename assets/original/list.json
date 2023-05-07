@@ -1,6 +1,11 @@
 [
     {
         "type": "image",
+        "name": "sprite_loading",
+        "path": "482.png"
+    },
+    {
+        "type": "image",
         "name": "sprite_menu_warning",
         "path": "605.png"
     }

@@ -1,12 +1,10 @@
 #include "LoadingState.hpp"
-#include "prefabs/SpriteNode.hpp"
-#include "prefabs/TextNode.hpp"
-#include "system/AssetTypes/FontAsset.hpp"
 
 using namespace Storm;
 
 void LoadingState::on_init()
 {
+    root->add_child(new LoadingSprite({}), "sprite_loading");
     root->add_child(new LoadingText({}), "text_loading");
 
     AssetLoader::load("./assets/assetlist.json");
