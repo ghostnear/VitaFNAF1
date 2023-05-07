@@ -6,6 +6,9 @@ build/
 .vscode/
 .cache/
 
+# Ignore Vita3k files.
+imgui.ini
+
 # Ignore cmake files
 CMakeFiles/
 CMakeCache.txt

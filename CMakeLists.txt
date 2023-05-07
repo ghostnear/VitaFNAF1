@@ -62,7 +62,6 @@ if(BUILD_TARGET MATCHES "VITA")
     ## Create Vita files
     vita_create_self(
         ${PROJECT_NAME}.self ${PROJECT_NAME}
-        SAFE    # Use unsafe if system modules are used.
     )
 
     vita_create_vpk(
@@ -84,6 +83,8 @@ if(BUILD_TARGET MATCHES "VITA")
         FILE assets/fonts/Volter-FNAF1.ttf assets/fonts/Volter-FNAF1.ttf
         FILE assets/original/list.json assets/original/list.json
         FILE assets/original/605.png assets/original/605.png
+        FILE assets/images/list.json assets/images/list.json
+        FILE assets/images/default.png assets/images/default.png
     )
 
 else()
