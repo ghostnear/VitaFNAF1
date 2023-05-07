@@ -2,10 +2,7 @@
 
 #include <libStorm.hpp>
 
-#include "WarningState.hpp"
-#include "../nodes/LoadingState/all.hpp"
-
-class LoadingState : public State
+class MenuState : public State
 {
 public:
     void on_init() override;

@@ -2,9 +2,10 @@
 
 #include <libStorm.hpp>
 
+#include "MenuState.hpp"
 #include "../nodes/WarningState/all.hpp"
 
-class WarningState : public Storm::State
+class WarningState : public State
 {
 public:
     void on_init() override;

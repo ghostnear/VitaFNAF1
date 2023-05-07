@@ -4,7 +4,7 @@
 
 struct LoadingTextConfig
 {
-    Storm::Prefabs::TextNodeConfig textCFG = {
+    Prefabs::TextNodeConfig textCFG = {
         .size = 32,
         .textOffset = {
             .x = 1,
@@ -24,7 +24,7 @@ struct LoadingTextConfig
     };
 };
 
-class LoadingText : public Storm::Prefabs::TextNode
+class LoadingText : public Prefabs::TextNode
 {
 private:
     static void update_loading_text(Node* slf);

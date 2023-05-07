@@ -5,6 +5,10 @@
     },
     {
         "type": "json",
+        "path": "images/list.json"
+    },
+    {
+        "type": "json",
         "path": "original/list.json"  
     }
 ]

@@ -7,7 +7,7 @@ using namespace Storm;
 
 void LoadingState::on_init()
 {
-    root->add_child(new LoadingText(LoadingTextConfig()), "text_loading");
+    root->add_child(new LoadingText({}), "text_loading");
 
     AssetLoader::load("./assets/assetlist.json");
     AssetLoader::start();

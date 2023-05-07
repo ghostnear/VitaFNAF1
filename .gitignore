@@ -2,9 +2,6 @@
 bin/
 build/
 
-# Ignore original assets.
-assets/original/*.png
-
 # Ignore vscode specific files
 .vscode/
 .cache/
