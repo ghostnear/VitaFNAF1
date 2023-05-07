@@ -8,6 +8,14 @@ void BackgroundFreddy::update_background_freddy(Node* slf)
     auto update_timer = slf->get_component<double>("update_timer");
     auto update_rate = slf->get_component<double>("update_rate");
     *update_timer += GameManager::get_delta_time();
+
+    // Update sprite frame.
+    auto frame = slf->get_component<int>("sprite_frame");
+    auto frame_max_count = slf->get_component<int>("frame_max_count");
+    auto frame_timer = slf->get_component<double>("frame_timer");
+    auto frame_rate = slf->get_component<double>("frame_rate");
+    *frame_timer += GameManager::get_delta_time();
+
     if(*update_timer > *update_rate)
     {
         while(*update_timer > *update_rate)
@@ -19,25 +27,17 @@ void BackgroundFreddy::update_background_freddy(Node* slf)
         *alpha = (double)(rand() % (*highAlpha - *lowAlpha + 1) + *lowAlpha) / 255.0;
     }
 
-    // Update sprite frame.
-    auto frame = slf->get_component<int>("sprite_frame");
-    auto frame_max_count = slf->get_component<int>("frame_max_count");
-    auto frame_timer = slf->get_component<double>("frame_timer");
-    auto frame_rate = slf->get_component<double>("frame_rate");
-    *frame_timer += GameManager::get_delta_time();
     if(*frame_timer > *frame_rate)
     {
         while(*frame_timer > *frame_rate)
             *frame_timer -= *frame_rate;
         
-        static int random_number = rand() % 100;
+        static int random_number;
+        random_number = rand() % 100;
         if(random_number < 97)
             *frame = 0;
-        else if(random_number == 99)
+        else
             *frame = random_number - 96;
-
-        SDL_Log("frame: %d", *frame);
-        SDL_Log("random_number: %d", random_number);
 
         slf->set_component<ImageAsset>(
             "sprite_image",

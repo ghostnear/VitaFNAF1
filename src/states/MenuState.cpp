@@ -5,7 +5,7 @@ using namespace Storm;
 void MenuState::on_init()
 {
     root->add_child(new BackgroundFreddy({}), "background_freddy");
-    //root->add_child(new BackgroundStatic({}), "background_static");
+    root->add_child(new BackgroundStatic({}), "background_static");
 }
 
 void MenuState::draw()

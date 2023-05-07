@@ -15,7 +15,7 @@ struct BackgroundStaticConfig
 
     Prefabs::SpriteNodeConfig spriteCFG = {
         .image = AssetManager::get_asset<AnimationAsset>("sprite_static")->get_frame(0),
-        .alpha = 1.0 / lowAlpha
+        .alpha = 2.0 / (lowAlpha + highAlpha)
     };
 };
 
