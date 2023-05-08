@@ -5,10 +5,10 @@
     },
     {
         "type": "json",
-        "path": "images/list.json"
+        "path": "original/list.json"  
     },
     {
         "type": "json",
-        "path": "original/list.json"  
+        "path": "images/list.json"
     }
 ]

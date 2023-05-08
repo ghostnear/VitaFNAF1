@@ -27,6 +27,9 @@ endif()
 # Project metadata
 project(FNAF1)
 
+# Game specific defines.
+add_compile_definitions(${GAME_TYPE})
+
 file(
     GLOB
     EXECUTABLE_FILES

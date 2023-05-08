@@ -1,13 +1,8 @@
 [
-    {
+        {
         "type": "image",
         "name": "sprite_loading",
         "path": "482.png"
-    },
-    {
-        "type": "image",
-        "name": "sprite_menu_warning",
-        "path": "605.png"
     },
     {
         "type": "animation",
@@ -34,5 +29,32 @@
             "441.png",
             "442.png"
         ]
+    },
+    {
+        "type": "animation",
+        "name": "sprite_menu_options",
+        "path": "menu_options/",
+        "data": [
+            "448.png",
+            "449.png",
+            "443.png",
+            "526.png",
+            "450.png"
+        ]
+    },
+    {
+        "type": "image",
+        "name": "sprite_game_title",
+        "path": "444.png"
+    },
+    {
+        "type": "image",
+        "name": "sprite_demo_text",
+        "path": "572.png"
+    },
+    {
+        "type": "image",
+        "name": "sprite_menu_warning",
+        "path": "605.png"
     }
 ]

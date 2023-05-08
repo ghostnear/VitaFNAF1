@@ -6,6 +6,12 @@ void MenuState::on_init()
 {
     root->add_child(new BackgroundFreddy({}), "background_freddy");
     root->add_child(new BackgroundStatic({}), "background_static");
+    root->add_child(new GameTitle({}), "game_title");
+    root->add_child(new MenuController({}), "menu_controller");
+
+#ifdef DEMO
+    root->add_child(new DemoText({}), "demo_text");
+#endif
 }
 
 void MenuState::draw()
