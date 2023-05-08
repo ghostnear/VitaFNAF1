@@ -4,6 +4,30 @@ void MenuController::menu_draw_function(Node* slf)
 {
     for(auto child : slf->get_children())
         child.second->execute("draw");
+
+    auto blip = slf->get_child("sprite_menu_options_arrow");
+    auto choice = slf->get_component<int>("choice");
+    auto max_choice = slf->get_component<int>("max_choice");
+
+#ifndef VITA
+    // Navigation using arrow keys.
+    if(Input::isKeyPressed(SDLK_DOWN) || Input::isKeyPressed(SDLK_s))
+        (*choice) = ((*choice) + 1) % (*max_choice);
+    if(Input::isKeyPressed(SDLK_UP) || Input::isKeyPressed(SDLK_w))
+    {
+        (*choice) = ((*choice) - 1) % (*max_choice);
+        if(*choice < 0)
+            *choice = *(max_choice) - 1;
+    }
+#endif
+
+    blip->set_component<Vec2<double>>(
+        "sprite_position",
+        new Vec2<double>{
+            .x = 97,
+            .y = 297.0 + 55 * (*choice)
+        }
+    );
 }
 
 MenuController::MenuController(MenuControllerConfig config)
@@ -18,6 +42,16 @@ MenuController::MenuController(MenuControllerConfig config)
             .y = 544.0 / 720
         }
     };
+
+    set_component<int>(
+        "max_choice",
+        new int(4)
+    );
+
+    set_component<int>(
+        "choice",
+        new int(0)
+    );
 
     add_function(
         "draw",

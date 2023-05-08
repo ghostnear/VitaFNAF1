@@ -1,8 +1,21 @@
 [
-        {
+    {
         "type": "image",
         "name": "sprite_loading",
         "path": "482.png"
+    },
+    {
+        "type": "animation",
+        "name": "sprite_scanlines",
+        "path": "scanlines/",
+        "data": [
+            "434.png",
+            "435.png",
+            "436.png",
+            "437.png",
+            "438.png",
+            "439.png"
+        ]
     },
     {
         "type": "animation",
@@ -46,6 +59,11 @@
         "type": "image",
         "name": "sprite_game_title",
         "path": "444.png"
+    },
+    {
+        "type": "image",
+        "name": "sprite_menu_bar",
+        "path": "452.png"
     },
     {
         "type": "image",
