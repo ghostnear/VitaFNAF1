@@ -7,17 +7,7 @@ void WarningState::on_init()
     root->add_child(new WarningSprite({}), "warning_sprite");
 }
 
-void WarningState::draw()
-{
-    Graphics::clear(0, 0, 0);
-
-    // Draw scene
-    root->execute_all("draw");
-
-    Graphics::update();
-}
-
-void WarningState::update(double dt)
+void WarningState::update()
 {
     // Press escape to close window
 #ifndef VITA

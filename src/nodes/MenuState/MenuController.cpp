@@ -4,8 +4,12 @@ void MenuController::menu_draw_function(Node* slf)
 {
     for(auto child : slf->get_children())
         child.second->execute("draw");
+}
 
+void MenuController::menu_update_function(Node* slf)
+{
     auto blip = slf->get_child("sprite_menu_options_arrow");
+
     auto choice = slf->get_component<int>("choice");
     auto max_choice = slf->get_component<int>("max_choice");
 
@@ -43,6 +47,30 @@ MenuController::MenuController(MenuControllerConfig config)
         }
     };
 
+    // Read save data.
+    json saveData;
+    try
+    {
+        saveData = Utils::read_json(config.saveDataLocation);
+        if(!saveData["night"].is_number())
+        {
+            saveData = json();
+            saveData["night"] = 1;
+            Utils::write_json("save.json", saveData);
+        }
+    }
+    catch(std::exception const&)
+    {
+        saveData = json();
+        saveData["night"] = 1;
+        Utils::write_json("save.json", saveData);
+    }
+
+    set_component<json>(
+        "save_data",
+        new json(saveData)
+    );
+
     set_component<int>(
         "max_choice",
         new int(4)
@@ -56,6 +84,11 @@ MenuController::MenuController(MenuControllerConfig config)
     add_function(
         "draw",
         menu_draw_function
+    );
+
+    add_function(
+        "update",
+        menu_update_function
     );
 
     for(auto index = 0; index < 4; index++)

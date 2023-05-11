@@ -11,26 +11,9 @@ void LoadingState::on_init()
     AssetLoader::start();
 }
 
-void LoadingState::draw()
+void LoadingState::update()
 {
-    Graphics::clear(0, 0, 0);
-
-    // Draw scene
-    root->execute_all("draw");
-
-    Graphics::update();
-}
-
-void LoadingState::update(double dt)
-{
-    // Press escape to close window
-#ifndef VITA
-    if(Input::isKeyReleased(SDLK_ESCAPE))
-        Window::close();
-#endif
-
-    // Update scene
-    root->execute_all("update");
+    State::update();
 
     // Go to main scene after waiting for thread to stop
     if(AssetLoader::get_percentage() == 1)
